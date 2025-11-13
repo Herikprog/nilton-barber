@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NILTON BARBER - Redefinindo a Realidade do Estilo Masculino com técnicas de precisão e experiência premium">
+    <title>NILTON BARBER - Beyond Excellence</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✂️</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor-follower"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">NILTON BARBER</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#gallery" class="nav-link">Galeria</a></li>
+                <li><a href="#services" class="nav-link">Serviços</a></li>
+                <li><a href="#ai-consultancy" class="nav-link">Consultoria AI</a></li>
+                <li><a href="#booking" class="nav-link booking-btn">Agendar</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">NILTON</span>
+                <span class="title-line">BARBER</span>
+            </h1>
+            <p class="hero-subtitle">A Revolução no Mundo da Barbearia</p>
+            <p class="hero-tagline">Redefinindo a Realidade do Estilo Masculino</p>
+            <a href="#booking" class="cta-button">
+                <span>INICIAR EXPERIÊNCIA</span>
+                <div class="button-glow"></div>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <section id="video-showcase" class="video-section">
+        <div class="section-header">
+            <h2 class="section-title">A Obra-Prima em Movimento</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&h=675&fit=crop" alt="Nilton Barber Showcase" class="video-placeholder">
+                <div class="video-overlay">
+                    <div class="play-button">
+                        <svg width="80" height="80" viewBox="0 0 80 80">
+                            <circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <polygon points="32,25 32,55 55,40" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="section-header">
+            <h2 class="section-title">Galeria de Arte Viva</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">Cada corte é uma obra-prima meticulosamente criada</p>
+        </div>
+        <div class="gallery-container">
+            <button class="gallery-nav prev" aria-label="Anterior">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <div class="gallery-track">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&h=1000&fit=crop" alt="Corte Premium 1">
+                    <div class="gallery-overlay">
+                        <h3>Corte Clássico</h3>
+                        <p>Elegância atemporal</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&h=1000&fit=crop" alt="Corte Premium 2">
+                    <div class="gallery-overlay">
+                        <h3>Fade Moderno</h3>
+                        <p>Transição perfeita</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&h=1000&fit=crop" alt="Corte Premium 3">
+                    <div class="gallery-overlay">
+                        <h3>Design de Barba</h3>
+                        <p>Contornos precisos</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&h=1000&fit=crop" alt="Corte Premium 4">
+                    <div class="gallery-overlay">
+                        <h3>Pompadour Premium</h3>
+                        <p>Volume e estilo</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1621607512214-68297480165e?w=800&h=1000&fit=crop" alt="Corte Premium 5">
+                    <div class="gallery-overlay">
+                        <h3>Undercut Elite</h3>
+                        <p>Simetria perfeita</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=800&h=1000&fit=crop" alt="Corte Premium 6">
+                    <div class="gallery-overlay">
+                        <h3>Transformação Completa</h3>
+                        <p>Resultado impressionante</p>
+                    </div>
+                </div>
+            </div>
+            <button class="gallery-nav next" aria-label="Próximo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+        <div class="gallery-dots"></div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="section-header">
+            <h2 class="section-title">Serviços Premium</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">Experiências que transcendem o ordinário</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card" data-service="classic-cut">
+                <div class="service-icon">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M30 10 L50 30 L30 50 L10 30 Z"/>
+                        <circle cx="30" cy="30" r="8"/>
+                    </svg>
+                </div>
+                <h3 class="service-title">Corte Clássico</h3>
+                <p class="service-duration">50 minutos</p>
+                <p class="service-price">€45</p>
+                <ul class="service-features">
+                    <li>Análise facial personalizada</li>
+                    <li>Corte com tesoura e máquina</li>
+                    <li>Finalização premium</li>
+                </ul>
+                <button class="service-btn" data-service="Corte Clássico" data-price="45" data-duration="50">Agendar Agora</button>
+            </div>
+
+            <div class="service-card featured" data-service="complete">
+                <div class="featured-badge">MAIS POPULAR</div>
+                <div class="service-icon">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="30" cy="30" r="20"/>
+                        <circle cx="30" cy="30" r="12"/>
+                        <path d="M30 10 L30 50 M10 30 L50 30 M18 18 L42 42 M42 18 L18 42"/>
+                    </svg>
+                </div>
+                <h3 class="service-title">Corte + Barba Completo</h3>
+                <p class="service-duration">90 minutos</p>
+                <p class="service-price">€70</p>
+                <ul class="service-features">
+                    <li>Corte de cabelo premium</li>
+                    <li>Design e aparação de barba</li>
+                    <li>Tratamentos exclusivos</li>
+                </ul>
+                <button class="service-btn" data-service="Corte + Barba Completo" data-price="70" data-duration="90">Agendar Agora</button>
+            </div>
+
+            <div class="service-card" data-service="beard">
+                <div class="service-icon">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="15" y="20" width="30" height="25" rx="5"/>
+                        <path d="M20 30 L40 30 M20 35 L40 35 M20 40 L40 40"/>
+                    </svg>
+                </div>
+                <h3 class="service-title">Design de Barba</h3>
+                <p class="service-duration">40 minutos</p>
+                <p class="service-price">€30</p>
+                <ul class="service-features">
+                    <li>Aparação e modelagem</li>
+                    <li>Alinhamento de contornos</li>
+                    <li>Hidratação e perfumação</li>
+                </ul>
+                <button class="service-btn" data-service="Design de Barba" data-price="30" data-duration="40">Agendar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-consultancy" class="ai-section">
+        <div class="section-header">
+            <h2 class="section-title">Consultor AI de Estilo</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">Tecnologia de ponta ao serviço da sua transformação</p>
+        </div>
+        <div class="ai-features">
+            <div class="ai-card">
+                <div class="ai-icon">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="40" cy="40" r="30"/>
+                        <circle cx="40" cy="40" r="20"/>
+                        <circle cx="40" cy="40" r="10"/>
+                        <path d="M40 10 L40 70 M10 40 L70 40"/>
+                    </svg>
+                </div>
+                <h3 class="ai-title">Análise Neural de Estilo</h3>
+                <p class="ai-description">IA analisa seu rosto, personalidade e tendências para criar o visual perfeito</p>
+            </div>
+            <div class="ai-card">
+                <div class="ai-icon">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="20" y="20" width="40" height="40" rx="5"/>
+                        <path d="M30 35 L50 35 M30 40 L50 40 M30 45 L50 45"/>
+                        <circle cx="40" cy="55" r="3"/>
+                    </svg>
+                </div>
+                <h3 class="ai-title">Projeção Holográfica</h3>
+                <p class="ai-description">Veja seu novo visual em tempo real através de realidade aumentada</p>
+            </div>
+            <div class="ai-card">
+                <div class="ai-icon">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M40 20 C 25 20, 25 35, 40 35 C 55 35, 55 50, 40 50 C 25 50, 25 65, 40 65"/>
+                        <circle cx="40" cy="20" r="3"/>
+                        <circle cx="40" cy="35" r="3"/>
+                        <circle cx="40" cy="50" r="3"/>
+                        <circle cx="40" cy="65" r="3"/>
+                    </svg>
+                </div>
+                <h3 class="ai-title">Evolução do Estilo</h3>
+                <p class="ai-description">Sistema aprende com suas preferências e evolui suas recomendações</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="booking-section">
+        <div class="section-header">
+            <h2 class="section-title">Agende Sua Visita</h2>
+            <div class="title-underline"></div>
+            <p class="section-subtitle">Reserve sua experiência premium</p>
+        </div>
+        <div class="booking-container">
+            <form id="booking-form" class="booking-form">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required placeholder="Seu nome">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+351 xxx xxx xxx">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Serviço</label>
+                    <select id="service" name="service" required>
+                        <option value="">Selecione um serviço</option>
+                        <option value="Corte Clássico" data-price="45" data-duration="50">Corte Clássico - €45 (50 min)</option>
+                        <option value="Design de Barba" data-price="30" data-duration="40">Design de Barba - €30 (40 min)</option>
+                        <option value="Corte + Barba Completo" data-price="70" data-duration="90">Corte + Barba Completo - €70 (90 min)</option>
+                    </select>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Data</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time">Horário</label>
+                        <select id="time" name="time" required>
+                            <option value="">Selecione um horário</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Observações (opcional)</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Alguma preferência ou observação especial?"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span>Confirmar Agendamento</span>
+                    <div class="button-glow"></div>
+                </button>
+            </form>
+            
+            <div id="booking-success" class="booking-success" style="display: none;">
+                <div class="success-icon">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3">
+                        <circle cx="40" cy="40" r="35"/>
+                        <polyline points="25 40 35 50 55 30"/>
+                    </svg>
+                </div>
+                <h3>Agendamento Confirmado!</h3>
+                <p>Sua experiência premium foi agendada com sucesso. Você receberá uma confirmação por email.</p>
+                <button class="new-booking-btn">Fazer Novo Agendamento</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>NILTON BARBER</h3>
+                <p>Beyond Excellence</p>
+            </div>
+            <div class="footer-info">
+                <p>© 2024 Nilton Barber. Todos os direitos reservados.</p>
+                <p>Redefinindo a Realidade do Estilo Masculino</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
