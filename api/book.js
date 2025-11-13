@@ -1,5 +1,3 @@
-import { google } from 'googleapis';
-
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ message: 'Method not allowed' });
@@ -39,7 +37,7 @@ export default async function handler(req, res) {
             }
         };
 
-        const gcalToken = process.env.GOOGLE_CALENDAR_ACCESS_TOKEN || process.env.REPLIT_GOOGLE_CALENDAR_INTEGRATION;
+        const gcalToken = process.env.GOOGLE_CALENDAR_ACCESS_TOKEN;
         
         if (gcalToken) {
             const response = await fetch('https://www.googleapis.com/calendar/v3/calendars/primary/events', {
