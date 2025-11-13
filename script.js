@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initParticles() {
     const canvas = document.getElementById('particles-canvas');
+    if (!canvas) return;
+    
     const ctx = canvas.getContext('2d');
     
     canvas.width = window.innerWidth;
@@ -86,6 +88,8 @@ function initParticles() {
 
 function initCursorFollower() {
     const cursor = document.querySelector('.cursor-follower');
+    if (!cursor) return;
+    
     let mouseX = 0;
     let mouseY = 0;
     let cursorX = 0;
@@ -118,10 +122,10 @@ function initCursorFollower() {
     const interactiveElements = document.querySelectorAll('a, button, .gallery-item, .service-card');
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
-            cursor.style.transform += ' scale(2)';
+            cursor.style.transform = `translate(${cursorX - 10}px, ${cursorY - 10}px) scale(2)`;
         });
         el.addEventListener('mouseleave', () => {
-            cursor.style.transform = cursor.style.transform.replace(' scale(2)', '');
+            cursor.style.transform = `translate(${cursorX - 10}px, ${cursorY - 10}px) scale(1)`;
         });
     });
 }
@@ -131,6 +135,8 @@ function initNavbar() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (!navbar || !mobileMenuToggle || !navMenu) return;
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
@@ -173,6 +179,8 @@ function initGallery() {
     const nextBtn = document.querySelector('.gallery-nav.next');
     const dotsContainer = document.querySelector('.gallery-dots');
     const items = document.querySelectorAll('.gallery-item');
+    
+    if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
     
     let currentIndex = 0;
     let itemsToShow = 3;
@@ -233,47 +241,6 @@ function initGallery() {
             updateGallery();
         }, 250);
     });
-    
-    let startX = 0;
-    let isDragging = false;
-    
-    track.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startX = e.clientX;
-    });
-    
-    track.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        const diff = startX - e.clientX;
-        if (Math.abs(diff) > 50) {
-            if (diff > 0) {
-                nextBtn.click();
-            } else {
-                prevBtn.click();
-            }
-            isDragging = false;
-        }
-    });
-    
-    track.addEventListener('mouseup', () => {
-        isDragging = false;
-    });
-    
-    track.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-    });
-    
-    track.addEventListener('touchend', (e) => {
-        const endX = e.changedTouches[0].clientX;
-        const diff = startX - endX;
-        if (Math.abs(diff) > 50) {
-            if (diff > 0) {
-                nextBtn.click();
-            } else {
-                prevBtn.click();
-            }
-        }
-    });
 }
 
 function initServiceCards() {
@@ -323,6 +290,8 @@ function initBookingForm() {
     const newBookingBtn = document.querySelector('.new-booking-btn');
     const dateInput = document.getElementById('date');
     
+    if (!form || !successMessage || !newBookingBtn) return;
+    
     const today = new Date();
     const tomorrow = new Date(today);
     tomorrow.setDate(tomorrow.getDate() + 1);
@@ -347,45 +316,13 @@ function initBookingForm() {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<span>Processando...</span>';
         
-        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.includes('replit')) {
-            console.log('Modo demonstração - Dados do agendamento:', data);
-            setTimeout(() => {
-                form.style.display = 'none';
-                successMessage.style.display = 'block';
-                createConfetti();
-            }, 1000);
-            return;
-        }
-        
-        try {
-            const response = await fetch('/api/book', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-            
-            if (response.ok) {
-                form.style.display = 'none';
-                successMessage.style.display = 'block';
-                
-                setTimeout(() => {
-                    createConfetti();
-                }, 100);
-            } else {
-                const error = await response.json();
-                alert('Erro ao processar agendamento: ' + (error.message || 'Tente novamente'));
-            }
-        } catch (error) {
-            console.error('Erro:', error);
-            alert('Erro ao processar agendamento. Por favor, tente novamente.');
-        } finally {
-            if (form.style.display !== 'none') {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = '<span>Confirmar Agendamento</span><div class="button-glow"></div>';
-            }
-        }
+        // Modo demonstração
+        console.log('Modo demonstração - Dados do agendamento:', data);
+        setTimeout(() => {
+            form.style.display = 'none';
+            successMessage.style.display = 'block';
+            createConfetti();
+        }, 1000);
     });
     
     newBookingBtn.addEventListener('click', () => {
@@ -461,6 +398,7 @@ function initScrollAnimations() {
     });
 }
 
+// Video play button
 const playButton = document.querySelector('.play-button');
 if (playButton) {
     playButton.addEventListener('click', () => {
