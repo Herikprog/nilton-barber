@@ -6,7 +6,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "*.css",
+      "src": "*.css", 
       "use": "@vercel/static"
     },
     {
@@ -24,7 +24,7 @@
       "dest": "/api/$1"
     },
     {
-      "src": "/(.*\\.(css|js))",
+      "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|ico|webp|avif|woff|woff2|ttf|eot))",
       "dest": "/$1"
     },
     {
